@@ -3,7 +3,7 @@ class MP3Importer
   attr_accessor :path, :files
   def initialize(path)
     @path = path
-    @files = Dir["../spec/fixtures/mp3s/*"]
+    @files = Dir[@path]
   end
   def files
     @files
