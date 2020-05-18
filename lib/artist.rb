@@ -22,4 +22,9 @@ class Artist
      self.new(name)
    end
   end 
+  def print_songs
+    Song.all.select {|song| song.artist == self}.each do |song|
+      puts song.name
+    end
+  end
 end
