@@ -8,8 +8,8 @@ class Artist
   def self.all
     @@all
   end
-  def add_song(name)
-    song = Song.new(name)
+  def add_song(song)
+    Song.all << song
     song.artist = self
   end
   def songs
